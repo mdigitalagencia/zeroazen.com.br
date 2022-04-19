@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta Pixel Code -->
+
+  <!-- End Meta Pixel Code -->
+    
+    
+  <!-- Global site tag (gtag.js) - Google Ads -->
+    
+  <!-- End Global site tag (gtag.js) - Google Ads -->
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Oswald&family=Prompt&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fffdcc;
+      background-size: cover;
+      font-family: 'Prompt', sans-serif;
+    }
+    p a {
+      color: black;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <button class="btn btn-success btn-lg btn-block p-3 mb-4" onclick="redirect()" style="font-size: 200%; font-family: 'Oswald', sans-serif; white-space: normal; border-bottom: 4px solid green;">▶︎ APERTE AQUI PARA CONTINUAR</button>
+        <p>© 2022 - Todos os direitos reservados. Este site não faz parte nem é endossado pelo Facebook. Facebook é uma marca comercial da Facebook, Inc.</p>
+        <p><a href="../terms/index.html">Termos de Uso</a> | <a href="../policy/index.html">Política de Privacidade</a></p>
+      </div>
+    </div>
+  </div>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+  function redirect() {
+    let d = "zeroazen.com.br";
+    let slg = "wd";
+
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var utm_source = new URL(document.location).searchParams.get("utm_source");
+    var utm_campaign = new URL(document.location).searchParams.get("utm_campaign");
+    var utm_content = new URL(document.location).searchParams.get("utm_content");
+    var utm_medium = new URL(document.location).searchParams.get("utm_medium");
+
+    fbq('track', 'ViewContent');
+    window.location = "https://"+d+"/"+slg+"/?utm_source="+utm_source+"&utm_campaign="+utm_campaign+"&utm_medium="+utm_medium+"&utm_content="+utm_content;
+
+  }
+</script>
+
+</body>
+</html>
