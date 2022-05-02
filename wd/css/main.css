@@ -1,0 +1,54 @@
+body, html{
+    background: #EBEDF0;
+}
+
+.card-footer{
+    background: #FF3464;
+    color: white;
+}
+
+.has-text-spotted{
+    color: #E71345;
+}
+
+.has-lineheight-hl{
+    line-height: .8em;
+}
+
+.is-cta{
+    background: #E71344;
+    color: white;
+    font-weight: 600;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    max-width: 100%;
+    margin: auto;
+}
+
+.is-cta:hover{
+    color: white;
+}
+
+a{
+    color: white;
+    text-decoration-color: white;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px){
+    .has-lineheight-min-mobile{
+        line-height: 1em !important;
+        padding-top: 15px;
+    }
+    .has-lineheight-hl{
+        line-height: 1em;
+    }
+    .px-6{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .mx-6{
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
