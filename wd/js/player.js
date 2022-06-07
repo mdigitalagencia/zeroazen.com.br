@@ -83,7 +83,7 @@ var dnone = true;
 player.on('timeupdate', () => {
     player.volume = 1;
     player.muted = false;
-    if (player.currentTime > 5 && dnone) {
+    if (player.currentTime > 1449 && dnone) {
         console.log('oi');
         // 1900 secs
         document.getElementById('hid').style.display = "block";
