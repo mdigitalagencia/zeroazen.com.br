@@ -16,13 +16,15 @@ body, html{
 }
 
 .is-cta{
-    background: #ff6600;
+    background: #39d37b;
     color: white;
     font-weight: 600;
     padding-left: 40px !important;
     padding-right: 40px !important;
     max-width: 100%;
     margin: auto;
+    white-space: normal;
+    height: auto;
 }
 
 .is-cta:hover{
