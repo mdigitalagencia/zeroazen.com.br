@@ -60,6 +60,27 @@ function stopVideo() {
   document.getElementById('p').style.display = "none";
 }
 
+var progress = document.getElementById('progress-bar');
+
+function updateProgress(player_time, player_duration) {
+    let percentage = ( 100 * player_time ) / player_duration;
+    if (percentage > 100) {
+      percentage = 100;
+    }
+    if (percentage < 0) {
+      percentage = 0;
+    }
+    if (percentage < 3){ // 27 p
+        percentage = percentage * 9;
+    } else if (percentage < 10){ // 48 p
+        percentage = 27 + ((percentage - 3) * 3);
+    } else if (percentage < 50){ // 88 p 
+        percentage = percentage + 38;
+    }else if (percentage >= 50){ // 100 p 
+        percentage = 88 + (12 * (percentage-50)/50);
+    }
+    progress.style.width = percentage + "%";
+}
 
 
 
@@ -90,6 +111,9 @@ player.on('timeupdate', () => {
         document.getElementById('hid2').style.display = "block";
         dnone = false;
     }
+  updateProgress(player.currentTime, player.duration);
+
+  
 });
 
 player.on('ready', () => {
